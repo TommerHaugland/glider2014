@@ -1,0 +1,315 @@
+/***************************
+GENERAL
+***************************/
+
+#left{
+	width: 100%;
+	min-height: 1300px;
+  cursor: auto;
+  overflow: hidden;
+}
+
+/***************************
+TABS
+***************************/
+
+.tab1 {
+	margin-left: 95px;
+	margin-top: 100px;
+}
+
+.tab2 {
+	margin-left: 95px;
+	margin-top: 100px;
+}
+
+.tab3 {
+  margin-left: 95px;
+  margin-top: 100px;
+}
+
+.label1{
+  margin-left: 118px; 
+}
+
+label{
+    margin-top: 50px;
+    
+    background-color: rgba(0,0,0,1);
+    color: white; 
+ 
+}
+
+/* Set the size and font of the tab widget */
+.tabGroup {
+    font: 10pt;
+    width: 800px;
+    height: 400px;
+}
+ 
+/* Configure the radio buttons to hide off screen */
+.tabGroup > input[type="radio"] {
+    position: absolute;
+    left:-500px;
+    top:-500px;
+}
+ 
+/* Configure labels to look like tabs */
+.tabGroup > input[type="radio"] + label {
+    /* inline-block such that the label can be given dimensions */
+    display: inline-block;
+
+    /* the bottom border is handled by the tab content div */
+    border-bottom: 0;
+ 
+    /* Padding around tab text */
+    padding: 5px 10px;
+    cursor: pointer;
+}
+ 
+/* Focused tabs need to be highlighted as such */
+.tabGroup > input[type="radio"]:focus + label {
+    text-decoration: none; 
+    cursor: pointer;
+}
+ 
+/* Checked tabs must be white with the bottom border removed */
+.tabGroup > input[type="radio"]:checked + label {
+    background-color:white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+ 
+/* The tab content must fill the widgets size and have a nice border */
+.tabGroup > div {
+    display: none;
+}
+ 
+/* This matchs tabs displaying to thier associated radio inputs */
+.tab1:checked ~ .tab1, .tab2:checked ~ .tab2, .tab3:checked ~ .tab3 {
+    display: block;
+}
+
+
+
+/***************************
+BILDEGALLERI
+***************************/
+
+#creds{
+    position: relative;
+    float: right;
+    margin-top: -140px;
+    margin-right: -67px;
+    font-style: italic;
+}
+
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { 
+    display: block; 
+}
+
+.group:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+}
+
+.image-gallery { 
+    margin: 20px 30px 25px 0; 
+    width: 920px;
+}
+
+figure { 
+  width: 120px; 
+  height: 80px;
+  float: left; 
+  margin: 0 150px 60px 0; 
+  -webkit-transition: all 0.7s ease; 
+  -moz-transition: all 1s ease;
+  position: relative;
+    cursor: pointer;
+     z-index: 0;
+}
+
+figcaption { 
+  text-align: left; 
+  width: 100%; 
+  font-size: 12px; 
+  position: relative;
+  margin-top: -30px;
+  margin-left: 30px;
+  color: white;
+  background-color: rgba(0,0,0,0.5); 
+  padding-left: 10px;
+  
+}
+
+figure img { 
+  width: 100%; /* Scale down */
+}
+
+figure:focus {
+    outline: none;
+    -webkit-transform: scale(2.2) translate(-40.5px); 
+    -moz-transform: scale(2.2) translate(-40.5px);
+    z-index: 9999;
+    cursor: auto;
+}
+
+#left:hover figure:focus  {
+      cursor: pointer;
+}
+
+
+/*****************************
+MEDIA QUERIES
+*****************************/
+
+@media screen and (max-width: 980px) {   
+    .image-gallery { 
+    width: 100%;
+}
+  .tabGroup {
+    width: 100%;
+  }
+}
+    
+/*FOR 700PX ELLER MINDRE*/
+@media screen and (max-width: 700px){   
+  .image-gallery { 
+    display: block;
+    width: 100%; 
+    margin: 0; 
+}
+
+figure { 
+  position: relative;
+  display: block;
+  margin: 0px auto;
+  width: auto; 
+  height: auto;
+  -webkit-transition: none; 
+  -moz-transition: none;
+  cursor: auto;  
+}
+
+figure:focus {
+  outline: none;
+  -webkit-transform: none; 
+  -moz-transform: none;
+  z-index: 9999;
+  cursor: auto;
+}
+figure img { 
+  width: auto;
+  cursor: auto;
+}
+
+  .tabGroup {
+    width: 100%;
+  }
+
+  .tab1 {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tab2 {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tab3 {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tabGroup {
+  width: 100%;
+  height: 100%;
+}
+
+#left img{
+  width: 100% ;
+  margin-top: 20px; 
+  margin-left: -30px; 
+}
+}
+
+
+/*FOR 480PX ELLER MINDRE*/
+@media screen and (max-width: 480px){
+  .image-gallery { 
+    width: 100%;   
+    margin: 0; 
+}
+
+figure { 
+  display: block;
+  min-width: auto;
+  height: auto;
+  float: left; 
+  -webkit-transition: none; 
+  -moz-transition: none;
+  cursor: auto;
+   margin: 0px auto; 
+}
+
+figure:focus {
+  outline: none;
+  -webkit-transform: none; 
+  -moz-transform: none;
+  z-index: 9999;
+  cursor: auto;
+}
+
+figure img { 
+  width: auto;
+  cursor: auto;
+}
+
+  .tabGroup {
+    width: 100%;
+  }
+
+  .tab1 {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tab2 {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tab3 {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tabGroup {
+  width: 100%;
+  height: 100%;
+}
+
+#left img{
+  width: auto ;
+}
+
+figcaption { 
+  margin-left: 0px;
+  width: 70%; 
+  font-size: 12px; 
+  position: relative;
+ 
+}
+
+}

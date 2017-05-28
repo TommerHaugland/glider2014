@@ -1,0 +1,94 @@
+
+/*****************************
+STRUKTUR
+*****************************/
+
+audio{
+	margin-left: 30px;
+}
+
+h3{
+	padding-left: 30px;
+	margin-top: -20px;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+h2{
+	font-size: 26px;
+	padding-top: 120px;
+	font-style: normal; 
+	font-weight: normal;
+}
+
+/*****************************
+INNHOLD
+*****************************/
+
+span {
+	display: block;
+}
+
+ul {
+	list-style-type: none;
+	margin-left: -44px;
+}
+
+
+li p{
+	position: absolute;
+	margin-left: 20px;
+	display: inline;
+	height: 50px;
+	width: 150px	
+}
+
+.linker {
+	position: absolute;
+	margin-left: 30px;	
+}
+
+.overskrift {
+	margin-top: 70px;
+}
+
+#diskografi {
+	margin-top: -80px;
+}
+
+#left img {
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 40px;
+}
+
+#right{
+	height: 950px;
+	background-color:rgba(255,255,255,0.5);
+}
+
+#left{
+	height: 950px;
+	background-color:rgba(255,255,255,0.5);
+}
+
+/*****************************
+MEDIA QUERIES
+*****************************/
+
+@media screen and (max-width: 980px) {
+	
+}
+	
+/*FOR 700PX ELLER MINDRE*/
+@media screen and (max-width: 700px){
+	
+}
+
+/*FOR 480PX ELLER MINDRE*/
+@media screen and (max-width: 480px){
+
+}
+
+
+

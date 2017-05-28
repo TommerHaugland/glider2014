@@ -1,0 +1,175 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700);
+
+/*****************************
+EVENTS
+*****************************/
+.events{
+	width: 100%;
+	position: relative;
+	float: right; 
+	height: 110px; 
+	
+}
+
+.events ul{
+	list-style-type: none; 
+}
+
+.circle {
+	width: 80px;
+	height: 80px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-color: #2f2f2f;
+	text-align: center; 
+	position: relative;
+	float: left;
+	margin-left: 30px;
+} 
+
+.month{
+	color: white;
+	font-size: 20px;
+	margin-bottom: -45px;
+	margin-top: 10px;
+}
+
+.date{
+	font-size: 35px;
+	color: white;
+	font-family: 'Roboto Slab', serif;	
+}
+
+.time{
+	margin-top: 0px; 
+}
+
+
+.event{
+	width: 200px;
+	position: relative;
+	float: right;	
+	margin-right: 30px; 
+	margin-top: 15px; 
+}
+
+#left{
+	min-height: 800px;
+}
+
+#right{
+	min-height: 800px;
+
+}
+
+/*****************************
+NEWS
+*****************************/
+
+.newstext{
+	padding-right: 30px;
+	font-size: 15px;
+	padding-bottom: 20px; 
+	max-width: 600px;
+	padding-left: 30px;	
+	margin-top: -10px;
+}
+
+/*****************************
+MEDIA QUERIES
+*****************************/
+
+@media screen and (max-width: 980px) {
+
+.circle {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	float: left;	
+} 
+
+.event{
+	width: 200px;
+	position: relative;
+	float: left;	
+	margin-left: 30px; 
+	margin-top: 5px; 
+}
+
+.events{
+	width: 200px;
+	position: relative;
+	float: left; 
+	height: 150px; 
+}
+
+#left{
+
+min-height: 1000px;
+
+}
+
+#right{
+	min-height: 1000px;
+}
+}
+	
+/*FOR 700PX ELLER MINDRE*/
+@media screen and (max-width: 700px){
+.event{
+	width: 200px;
+	position: relative;
+	float: right;	
+	margin-right: 30px; 
+	margin-top: 15px; 
+}
+
+.events{
+	width: 400px;
+	position: relative;
+	float: left; 
+	height: 110px; 
+}
+
+#left{
+
+min-height: 500px;
+
+}
+
+#right{
+	min-height: 500px;
+}
+
+
+}
+
+/*FOR 480PX ELLER MINDRE*/
+@media screen and (max-width: 480px){
+
+	.circle {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	float: left;	
+} 
+
+.event{
+	width: 200px;
+	position: relative;
+	float: left;	
+	margin-left: 30px; 
+	margin-top: 5px; 
+}
+
+.events{
+	width: 200px;
+	position: relative;
+	float: left; 
+	height: 150px; 
+}
+	
+
+
+}

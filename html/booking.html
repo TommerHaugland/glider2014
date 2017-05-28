@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--Viewport meta til iphone skalasjon!-->
+		<meta name="viewport" content="width=device-width, intitial-scale= 1.0">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/booking.css">
+		<link rel="stylesheet" type="text/css" href="../css/slider.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href="../img/favicon.png" title="favicon">	
+		<title>Glider Collider</title>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="../js/main.js"></script>
+		<!-- From -->
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&amp;sensor=false"> 
+		</script>
+					<script>
+						var myCenter=new google.maps.LatLng(60.41021,5.22756);
+						var marker;
+
+						function initialize()
+						{
+						var mapProp = {
+						  center:myCenter,
+						  zoom:10,
+						  mapTypeId:google.maps.MapTypeId.ROADMAP
+						  };
+
+						var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+						marker=new google.maps.Marker({
+						  position:myCenter,				
+						  icon:'../img/mapicon.png'
+						  });
+
+						marker.setMap(map);
+						}
+
+						google.maps.event.addDomListener(window, 'load', initialize);
+					</script>					
+					
+ 	</head>
+
+
+	<body>
+		<div id="pagewrap">
+
+				<header>
+					<a href="../index.html"> <img src="../img/logo1.png" id="logo" alt="Glider Collider Logo"> </a>
+					<img src="../img/header2.png" alt="header image" class="rb"/>
+				</header>
+
+				<nav>
+					<a href="#" id="toggle"><span>MENY</span></a>
+					<ul class="togglenone">
+						<li><a href="../index.html"><span>HJEM</span></a></li>
+						<li><a href="bilder.html"><span>BILDER</span></a></li>
+						<li><a href="musikk.html"><span>MUSIKK</span></a></li>
+						<li><a href="omoss.html"><span>OM OSS</span></a></li>
+						<li class="current"><a href="booking.html"><span>BOOKING</span></a></li>
+					</ul>
+				</nav>
+
+			<article>		
+
+			    <div id="content-slider">
+			        <div id="slider">  <!-- Slider container -->
+			        	<div id="mask">  <!-- Mask -->
+
+					        <ul>
+					       		<li id="first" class="firstanimation"> 
+					        		<img src="../img/slider/booking/1.png" alt="Bandbilde"/>				        		
+					        	</li>
+			 
+						        <li id="second" class="secondanimation">
+						        	<img src="../img/slider/booking/2.png" alt="Askjell"/>				        	
+						        </li>
+
+						        <li id="third" class="thirdanimation">
+						        	<img src="../img/slider/booking/3.png" alt="Markus"/> 					        	
+						        </li>
+
+						        <li id="fourth" class="fourthanimation">
+						        	<img src="../img/slider/booking/4.png" alt="Daniel"/> 					        	
+						        </li>
+
+						        <li id="fifth" class="fifthanimation">
+						        	<img src="../img/slider/booking/5.png.png" alt="Markus"/> 					        	
+						        </li>
+						    </ul>
+
+			       		</div>  <!-- End Mask -->
+			    	</div>  <!-- End Slider Container -->
+				</div>
+
+				<section id="left">		
+					<div id="googleMap"></div>		
+					<a href="http://goo.gl/maps/Gx8HL" title="Stort kart" id="kart"> Se større kart </a>	
+					<a href="http://goo.gl/maps/Gx8HL" title="Stort kart" id="mobilkart"> Se hvor vi holder til på Google Maps </a>
+				</section>
+
+				<section id="right">					
+				   <h1> Kontakt oss</h1>
+				   		<p class="kontakt">Booking og management: <br/> 
+				   			Joakim Eide <br/>				
+					   		<a href="joakim@glidercollider.com" title="Booking og management e-post">joakim@glidercollider.com</a> <br/>
+					   		<a class="tlf" href="tel:+4795449547">954 49 547</a> <!-- Phonelink for smaller screens/cellphones -->
+					   		<span class="notlf">954 49 547</span> <!-- Phone text for desktop -->
+					   	</p>
+				   		<p class="kontakt">PR- og promoavdeling: <br/> 
+					   		Thomas Mongstad <br/> 			
+					   		<a href="thomas@glidercollider.com" title="PR- og promoavdeling e-post">thomas@glidercollider.com</a> <br/>
+					   		<a class="tlf" href="tel:+4795449547">954 49 547</a> <!-- Phonelink for smaller screens/cellphones -->
+				   		<span class="notlf">954 49 547</span> </p> <!-- Phone text for desktop -->
+				   		<p class="kontakt">Booking: <br/> 			
+				   			<a href="booking@glidercollider.com" title="Booking e-post">thomas@glidercollider.com</a> 
+				   		</p>
+					
+				</section>
+			
+			</article>				
+
+			<section class="socialmedia">			 
+					<a href="http://facebook.com/" target="_blank" class="facebook" title="Facebook link"></a>
+					<a href="http://itunes.com/" target="_blank" class="itunes" title="iTunes link"></a>
+					<a href="http://soundcloud.com/" target="_blank" class="soundcloud" title="Soundcloud link"></a>
+					<a href="http://spotify.com/" target="_blank" class="spotify" title="Spotify link"></a>
+					<a href="http://twitter.com/" target="_blank" class="twitter" title="Twitter link"></a>
+					<a href="http://www.nrk.no/urort/artist/GliderCollider/default.aspx" class="urort" title="Urørt link"></a>
+			</section>					
+
+			<footer>
+				<img src="../img/footer2.png" alt="footer image" class="rb">
+			</footer>		
+
+		</div>			
+
+	</body>
+
+</html>

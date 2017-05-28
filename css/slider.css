@@ -1,0 +1,267 @@
+/* SLIDER STRUCTURE */
+
+#slider {
+   background: #000;   
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.0);
+   height: 500px;
+   width: 980px;
+   overflow: hidden;
+   position: absolute;
+   margin-top: -222px;
+   margin-bottom: 10px;
+    cursor: auto;
+
+}
+
+#content-slider{
+   width:100%;
+   height:360px;
+    cursor: auto;
+}
+
+/*Masken MÅ være samme høyde som selve slideren!
+Masken lar oss gjemme bildene etter hverandre.*/
+#mask {
+   overflow: hidden;
+   height: 500px; 
+    cursor: auto;
+}
+
+/*Nå har vi alle bildene våre som er i en liste i HTMLn*/
+
+ /* IMAGE LIST */
+
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+#slider li {
+   width: auto;   /*Width Image*/
+   height: 500px;  /* Height Image */
+   position: absolute;
+   
+   list-style: none;
+    cursor: auto;
+}
+
+ul img{
+    cursor: auto;
+}
+
+/*ANIMASJON & KEYFRAMES. Bruker enkel matte.
+5 bilder x 5 sekunder = 25 keyframes.*/
+
+#slider li.firstanimation {
+   animation: cycle 35s linear infinite;
+   -webkit-animation: cycle 35s linear infinite;     
+}
+
+#slider li.secondanimation {
+   animation: cycletwo 35s linear infinite;  
+   -webkit-animation: cycletwo 35s linear infinite;
+}
+
+#slider li.thirdanimation {
+   animation: cyclethree 35s linear infinite;   
+   -webkit-animation: cyclethree 35s linear infinite;   
+}
+
+#slider li.fourthanimation {
+   animation: cyclefour 35s linear infinite;    
+   -webkit-animation: cyclefour 35s linear infinite;   
+}
+
+#slider li.fifthanimation {
+   animation: cyclefive 35s linear infinite;    
+   -webkit-animation: cyclefive 35s linear infinite;
+}
+
+/* ANIMATION */
+
+@keyframes cycle {
+   0%  { top: 0px; } /* When you start the slide, the first image is already visible */
+   4%  { top: 0px; } /* Original Position */
+   16% { top: 0px; opacity:1; z-index:0; } /* From 4% to 16 % = for 3 seconds the image is visible */
+   20% { top: 325px; opacity: 0; z-index: 0; } /* From 16% to 20% = for 1 second exit image */
+   21% { top: -325px; opacity: 0; z-index: -1; } /* Return to Original Position */
+   92% { top: -325px; opacity: 0; z-index: 0; }
+   96% { top: -325px; opacity: 0; } /* From 96% to 100% = for 1 second enter image*/
+   100%{ top: 0px; opacity: 1; }
+}
+
+@-webkit-keyframes cycle {
+   0%  { top: 0px; } /* When you start the slide, the first image is already visible */
+   4%  { top: 0px; } /* Original Position */
+   16% { top: 0px; opacity:1; z-index:0; } /* From 4% to 16 % = for 3 seconds the image is visible */
+   20% { top: 325px; opacity: 0; z-index: 0; } /* From 16% to 20% = for 1 second exit image */
+   21% { top: -325px; opacity: 0; z-index: -1; } /* Return to Original Position */
+   92% { top: -325px; opacity: 0; z-index: 0; }
+   96% { top: -325px; opacity: 0; } /* From 96% to 100% = for 1 second enter image*/
+   100%{ top: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+   0%  { top: -325px; opacity: 0; } /* Original Position */
+   16% { top: -325px; opacity: 0; }/* Starts moving after 16% to this position */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* From 20% to 24% = for 1 second enter image*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* From 24% to 36 % = for 3 seconds the image is visible */
+   40% { top: 325px; opacity: 0; z-index: 0; } /* From 36% to 40% = for 1 second exit image */
+   41% { top: -325px; opacity: 0; z-index: -1; }   /* Return to Original Position */
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@-webkit-keyframes cycletwo {
+   0%  { top: -325px; opacity: 0; } /* Original Position */
+   16% { top: -325px; opacity: 0; }/* Starts moving after 16% to this position */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* From 20% to 24% = for 1 second enter image*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* From 24% to 36 % = for 3 seconds the image is visible */
+   40% { top: 325px; opacity: 0; z-index: 0; } /* From 36% to 40% = for 1 second exit image */
+   41% { top: -325px; opacity: 0; z-index: -1; }   /* Return to Original Position */
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+   0%  { top: -325px; opacity: 0; }
+   36% { top: -325px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; } 
+   56% { top: 0px; opacity: 1; } 
+   60% { top: 325px; opacity: 0; z-index: 0; }
+   61% { top: -325px; opacity: 0; z-index: -1; } 
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@-webkit-keyframes cyclethree {
+   0%  { top: -325px; opacity: 0; }
+   36% { top: -325px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; } 
+   56% { top: 0px; opacity: 1; } 
+   60% { top: 325px; opacity: 0; z-index: 0; }
+   61% { top: -325px; opacity: 0; z-index: -1; } 
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+   0%  { top: -325px; opacity: 0; }
+   56% { top: -325px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 325px; opacity: 0; z-index: 0; }
+   81% { top: -325px; opacity: 0; z-index: -1; }
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@-webkit-keyframes cyclefour {
+   0%  { top: -325px; opacity: 0; }
+   56% { top: -325px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 325px; opacity: 0; z-index: 0; }
+   81% { top: -325px; opacity: 0; z-index: -1; }
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefive {
+   0%  { top: -325px; opacity: 0; }
+   76% { top: -325px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   84% { top: 0px; opacity: 1; }
+   96% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 325px; opacity: 0; z-index: 0; }
+}
+
+@-webkit-keyframes cyclefive {
+   0%  { top: -325px; opacity: 0; }
+   76% { top: -325px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   84% { top: 0px; opacity: 1; }
+   96% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 325px; opacity: 0; z-index: 0; }
+}
+
+/*****************************
+MEDIA QUERIES
+*****************************/
+
+@media screen and (max-width: 980px) {
+   ul img {
+   width: 100%;   /*Width Image*/
+   height: auto;  /* Height Image */
+}
+
+   #slider {
+      width: 100%;   /*Width Image*/
+   height: auto;
+   }
+
+}
+   
+/*FOR 700PX ELLER MINDRE*/
+@media screen and (max-width: 700px){
+  ul img {
+      width: 100%;   /*Width Image*/
+      height: auto;  /* Height Image */
+   }
+
+   #slider {
+      width: 100%;   /*Width Image*/
+    height: auto;
+
+   }
+
+}
+
+/*FOR 480PX ELLER MINDRE*/
+@media screen and (max-width: 480px){
+   ul img {
+      max-width: 480px;   /*Width Image*/
+      height: 245px;  /* Height Image */
+   }
+
+   #slider {
+      max-width: 480px;   /*Width Image*/
+      height: 245px;
+      margin-top: 0; 
+      background: none;
+
+
+   }
+
+ 
+
+   
+#slider li.firstanimation {
+   animation: none;
+   -webkit-animation: none;     
+}
+
+#slider li.secondanimation {
+   animation: none;  
+   -webkit-animation: none;
+}
+
+#slider li.thirdanimation {
+   animation: none;  
+   -webkit-animation: none;  
+}
+
+#slider li.fourthanimation {
+   animation: none;  
+   -webkit-animation: none;   
+}
+
+#slider li.fifthanimation {
+  animation: none;  
+   -webkit-animation: none;
+}
+
+
+
+}
